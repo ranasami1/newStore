@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@font-face {
+    font-family: "Integral CF Bold";
+    src: url("./assets/fonts/Fontspring-DEMO-integralcf-bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family:"Satoshi-Black"; ;
+    src: url(./assets/fonts//Satoshi-Black.otf) format("opentype");
+}
+@font-face {
+    font-family:"Satoshi-light"; ;
+    src: url(./assets/fonts//Satoshi-Light.otf) format("opentype");
+}
