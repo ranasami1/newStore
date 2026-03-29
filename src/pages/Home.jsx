@@ -2,7 +2,8 @@ import heroBg from "../assets/images/Rectangle 2.png";
 import Button from "../components/ui/Button";
 export default function Home() {
   return (
-    <div className="flex bg-[#F2F0F1] flex-wrap justify-between p-5 sm:p-10 pb-0">
+    <div className="bg-white">
+      <div className="flex bg-[#F2F0F1] flex-wrap justify-between p-5 sm:p-10 pb-0">
       <div className="flex flex-col gap-5 justify-center md:w-1/2">
         <h1
           className="text-black text-3xl md:text-6xl"
@@ -32,6 +33,7 @@ export default function Home() {
         </div>
       </div>
       <div><img className="w-full" src={heroBg} alt="Hero" /></div>
+    </div>
     </div>
   );
 }

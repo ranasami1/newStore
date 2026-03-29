@@ -4,14 +4,21 @@ import { IoSearch } from "react-icons/io5";
 import { RiShoppingCartLine } from "react-icons/ri";
 import { CgProfile } from "react-icons/cg";
 import { PiListBold } from "react-icons/pi";
+import Input from "../ui/Input";
 
 export default function Navbar() {
   return (
     <div className="flex flex-col">
       <div className="bg-black flex flex-row items-center px-5 md:px-10">
-        <p className="text-white py-1 mx-auto text-xs" style={{fontFamily:"Satoshi-light, sans-serif"}}>
+        <p
+          className="text-white py-1 mx-auto text-xs"
+          style={{ fontFamily: "Satoshi-light, sans-serif" }}
+        >
           Sign up and get 20% off to your first order.
-          <a href="#" className="underline underline-offset-7 text-white m-1 font-bold">
+          <a
+            href="#"
+            className="underline underline-offset-7 text-white m-1 font-bold"
+          >
             Sign Up Now
           </a>
         </p>
@@ -22,13 +29,19 @@ export default function Navbar() {
         <PiListBold className="block md:hidden text-xl" />
 
         <div>
-          <p className="text-black text-2xl md:text-3xl" style={{fontFamily:"Integral CF Bold, sans-serif"}}>
+          <p
+            className="text-black text-2xl md:text-3xl"
+            style={{ fontFamily: "Integral CF Bold, sans-serif" }}
+          >
             SHOP.CO
           </p>
         </div>
 
         <div className="hidden md:block">
-          <ul className="flex items-center gap-5" style={{fontFamily:"Satoshi-light, sans-serif"}}>
+          <ul
+            className="flex items-center gap-5"
+            style={{ fontFamily: "Satoshi-light, sans-serif" }}
+          >
             <li className="text-black flex items-center cursor-pointer text-sm">
               Shop <RiArrowDropDownLine className="text-xl" />
             </li>
@@ -38,15 +51,9 @@ export default function Navbar() {
           </ul>
         </div>
 
-        <div className="bg-gray-200 p-2 rounded-full gap-1 w-xl hidden md:flex items-center">
+        <Input placeholder="Search for products..." mobile="hidden" className="w-lg">
           <IoSearch className="text-gray-500 text-xl" />
-          <input
-            className="w-full text-gray-500 p-0.5 outline-none bg-transparent"
-            type="text"
-            placeholder="Search for products..."
-          />
-        </div>
-
+        </Input>
         <div className="flex gap-2">
           <RiShoppingCartLine className="text-xl cursor-pointer" />
           <CgProfile className="text-xl cursor-pointer" />
