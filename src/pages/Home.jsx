@@ -139,7 +139,7 @@ export default function Home() {
         </div>
         <Button
           onClick={toggle}
-          className="!w-50 bg-white !text-black hover:bg-black hover:!text-white transform:transition-transform duration-300 border border-gray-300"
+          className="!w-70 bg-white !text-black hover:bg-black hover:!text-white transform:transition-transform duration-300 border border-gray-300"
         >
           View All
         </Button>
@@ -207,7 +207,7 @@ export default function Home() {
         </div>
         <Button
           onClick={toggle}
-          className="!w-50 bg-white !text-black hover:bg-black hover:!text-white transform:transition-transform duration-300 border border-gray-300"
+          className="!w-70 bg-white !text-black hover:bg-black hover:!text-white transform:transition-transform duration-300 border border-gray-300"
         >
           View All
         </Button>
