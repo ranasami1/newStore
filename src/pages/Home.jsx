@@ -12,7 +12,8 @@ import productPic3 from "../assets/images/image 9.png";
 import productPic4 from "../assets/images/image 10.png";
 import { useToggle } from "../hooks/useToggle.jsx";
 export default function Home() {
-  const { isOpen, toggle } = useToggle();
+  const { isOpen: isNewArrivalsOpen, toggle: toggleNewArrivals } = useToggle();
+  const { isOpen: isTopSellingOpen, toggle: toggleTopSelling } = useToggle();
   return (
     <div className="bg-white">
       <div className="flex bg-[#F2F0F1] flex-wrap justify-between p-5 sm:p-10 pb-0">
@@ -111,7 +112,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className={`${isOpen ? "flex " : "hidden"} w-full md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5`}>
+        <div className={`${isNewArrivalsOpen ? "flex " : "hidden"} w-full md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5`}>
           <ProductCard
             className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
             children={productPic}
@@ -138,8 +139,9 @@ export default function Home() {
           />
         </div>
         <Button
-          onClick={toggle}
+          onClick={toggleNewArrivals}
           className="!w-70 bg-white !text-black hover:bg-black hover:!text-white transform:transition-transform duration-300 border border-gray-300"
+          id="New Arrivals View All Button"
         >
           View All
         </Button>
@@ -179,7 +181,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className={`${isOpen ? "flex " : "hidden"} w-full md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5`}>
+        <div className={`${isTopSellingOpen  ? "flex " : "hidden"} w-full md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5`}>
           <ProductCard
             className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
             children={productPic}
@@ -206,8 +208,9 @@ export default function Home() {
           />
         </div>
         <Button
-          onClick={toggle}
+          onClick={toggleTopSelling}
           className="!w-70 bg-white !text-black hover:bg-black hover:!text-white transform:transition-transform duration-300 border border-gray-300"
+          id="Top Selling View All Button"
         >
           View All
         </Button>
