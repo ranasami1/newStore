@@ -8,8 +8,11 @@ import brand5 from "../assets/images/Group.png";
 import ProductCard from "../components/ui/ProductCard.jsx";
 import productPic from "../assets/images/image 7.png";
 import productPic2 from "../assets/images/image 8.png";
-import productPic3 from "../assets/images/image 10.png";
+import productPic3 from "../assets/images/image 9.png";
+import productPic4 from "../assets/images/image 10.png";
+import { useToggle } from "../hooks/useToggle.jsx";
 export default function Home() {
+  const { isOpen, toggle } = useToggle();
   return (
     <div className="bg-white">
       <div className="flex bg-[#F2F0F1] flex-wrap justify-between p-5 sm:p-10 pb-0">
@@ -102,13 +105,42 @@ export default function Home() {
             />
             <ProductCard
               className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
-              children={productPic3}
+              children={productPic4}
               productName="Product 4"
               productPrice="$249.99"
             />
           </div>
         </div>
-        <Button className="w-40 bg-white !text-black hover:bg-black hover:!text-white transform:transition-transform duration-300 border border-gray-300">
+        <div className={`${isOpen ? "flex " : "hidden"} w-full md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5`}>
+          <ProductCard
+            className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+            children={productPic}
+            productName="Product 1"
+            productPrice="$99.99"
+          />
+          <ProductCard
+            className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+            children={productPic2}
+            productName="Product 2"
+            productPrice="$149.99"
+          />
+          <ProductCard
+            className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+            children={productPic}
+            productName="Product 3"
+            productPrice="$199.99"
+          />
+          <ProductCard
+            className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+            children={productPic3}
+            productName="Product 4"
+            productPrice="$249.99"
+          />
+        </div>
+        <Button
+          onClick={toggle}
+          className="!w-50 bg-white !text-black hover:bg-black hover:!text-white transform:transition-transform duration-300 border border-gray-300"
+        >
           View All
         </Button>
       </div>
