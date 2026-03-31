@@ -144,6 +144,74 @@ export default function Home() {
           View All
         </Button>
       </div>
+      <div className="flex flex-col items-center justify-center h-auto gap-5 py-10 sm:px-10 sm:py-20 border-b border-gray-300 mb-20">
+        <h1
+          className="text-black text-3xl md:text-4xl px-5"
+          style={{ fontFamily: "Integral CF Bold, sans-serif" }}
+        >
+          top selling
+        </h1>
+        <div className="w-full overflow-hidden">
+          <div className="flex md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5">
+            <ProductCard
+              className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+              children={productPic}
+              productName="Product 1"
+              productPrice="$99.99"
+            />
+            <ProductCard
+              className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+              children={productPic2}
+              productName="Product 2"
+              productPrice="$149.99"
+            />
+            <ProductCard
+              className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+              children={productPic}
+              productName="Product 3"
+              productPrice="$199.99"
+            />
+            <ProductCard
+              className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+              children={productPic4}
+              productName="Product 4"
+              productPrice="$249.99"
+            />
+          </div>
+        </div>
+        <div className={`${isOpen ? "flex " : "hidden"} w-full md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5`}>
+          <ProductCard
+            className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+            children={productPic}
+            productName="Product 1"
+            productPrice="$99.99"
+          />
+          <ProductCard
+            className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+            children={productPic2}
+            productName="Product 2"
+            productPrice="$149.99"
+          />
+          <ProductCard
+            className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+            children={productPic}
+            productName="Product 3"
+            productPrice="$199.99"
+          />
+          <ProductCard
+            className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
+            children={productPic3}
+            productName="Product 4"
+            productPrice="$249.99"
+          />
+        </div>
+        <Button
+          onClick={toggle}
+          className="!w-50 bg-white !text-black hover:bg-black hover:!text-white transform:transition-transform duration-300 border border-gray-300"
+        >
+          View All
+        </Button>
+      </div>
     </div>
   );
 }
