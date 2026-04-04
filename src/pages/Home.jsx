@@ -15,6 +15,11 @@ import formal from "../assets/images/Formal.png";
 import party from "../assets/images/Party.png";
 import gym from "../assets/images/Gym.png";
 import { useToggle } from "../hooks/useToggle.jsx";
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
+import { IoStarSharp } from "react-icons/io5";
+import { MdVerified } from "react-icons/md";
+
 export default function Home() {
   const { isOpen: isNewArrivalsOpen, toggle: toggleNewArrivals } = useToggle();
   const { isOpen: isTopSellingOpen, toggle: toggleTopSelling } = useToggle();
@@ -225,52 +230,173 @@ export default function Home() {
       </div>
       <div className="bg-white p-5 md:p-10 flex items-center justify-center">
         <div className="bg-[#F2F0F1] w-[99.5%] m-auto rounded-3xl p-5 md:p-10">
-        <h1
-          className="text-center text-3xl font-bold mb-8"
-          style={{ fontFamily: "Integral CF Bold, sans-serif" }}
-        >
-          BROWSE BY DRESS STYLE
-        </h1>
+          <h1
+            className="text-center text-3xl font-bold mb-8"
+            style={{ fontFamily: "Integral CF Bold, sans-serif" }}
+          >
+            BROWSE BY DRESS STYLE
+          </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-1">
-            <p className="font-bold text-lg z-10 relative">Casual</p>
-            <img
-              src={casual}
-              alt="Casual"
-              className="absolute right-0 bottom-0 h-full object-cover"
-            />
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-1 hover:scale-105 transition-transform duration-300">
+              <p className="font-bold text-lg z-10 relative">Casual</p>
+              <img
+                src={casual}
+                alt="Casual"
+                className="absolute right-0 bottom-0 h-full object-cover"
+              />
+            </div>
 
-          <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-2">
-            <p className="font-bold text-lg z-10 relative">Formal</p>
-            <img
-              src={formal}
-              alt="Formal"
-              className="absolute right-0 bottom-0 h-full object-cover"
-            />
-          </div>
+            <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-2 hover:scale-105 transition-transform duration-300">
+              <p className="font-bold text-lg z-10 relative">Formal</p>
+              <img
+                src={formal}
+                alt="Formal"
+                className="absolute right-0 bottom-0 h-full object-cover"
+              />
+            </div>
 
-          <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-2">
-            <p className="font-bold text-lg z-10 relative">Party</p>
-            <img
-              src={party}
-              alt="Party"
-              className="absolute right-0 bottom-0 h-full object-cover"
-            />
-          </div>
+            <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-2 hover:scale-105 transition-transform duration-300">
+              <p className="font-bold text-lg z-10 relative">Party</p>
+              <img
+                src={party}
+                alt="Party"
+                className="absolute right-0 bottom-0 h-full object-cover"
+              />
+            </div>
 
-          <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-1">
-            <p className="font-bold text-lg z-10 relative">Gym</p>
-            <img
-              src={gym}
-              alt="Gym"
-              className="absolute right-0 bottom-0 h-full object-cover"
-            />
+            <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-1 hover:scale-105 transition-transform duration-300">
+              <p className="font-bold text-lg z-10 relative">Gym</p>
+              <img
+                src={gym}
+                alt="Gym"
+                className="absolute right-0 bottom-0 h-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
+      <div className="bg-white p-5 md:p-10 flex flex-col">
+        <div className="flex items-center justify-between">
+        <h1
+          className=" text-3xl font-bold"
+          style={{ fontFamily: "Integral CF Bold, sans-serif" }}
+        >
+          OUR HAPPY CUSTOMERS
+        </h1>
+        <div className="flex items-center gap-5">
+          <FaArrowLeft />
+          <FaArrowRight />
         </div>
+      </div>
+      <div className="p-5 flex items-center gap-5 overflow-x-scroll ">
+        <div
+          id="review"
+          className="flex flex-col gap-3 p-5 md:p-5 items-start rounded-2xl border-gray-300 border min-w-100% md:w-60"
+        >
+          <span className="flex gap-1 ">
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+          </span>
+          <p className="flex items-center font-bold" style={{fontFamily:"Satoshi-bold,sans-serif"}}>
+            Sarah M.
+            <MdVerified className="text-[#01AB31]" />
+          </p>
+          <p className="text-gray-500 text-xs">
+            "I'm blown away by the quality and style of the clothes I received
+            from Shop.co. From casual wear to elegant dresses, every piece I've
+            bought has exceeded my expectations.”
+          </p>
+        </div>
+        <div
+          id="review"
+          className="flex flex-col gap-3 p-5 md:p-5 items-start rounded-2xl border-gray-300 border min-w-100% md:w-60"
+        >
+          <span className="flex gap-1 ">
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+          </span>
+          <p className="flex items-center font-bold" style={{fontFamily:"Satoshi-bold,sans-serif"}}>
+            Sarah M.
+            <MdVerified className="text-[#01AB31]" />
+          </p>
+          <p className="text-gray-500 text-xs">
+            "I'm blown away by the quality and style of the clothes I received
+            from Shop.co. From casual wear to elegant dresses, every piece I've
+            bought has exceeded my expectations.”
+          </p>
+        </div>
+        <div
+          id="review"
+          className="flex flex-col gap-3 p-5 md:p-5 items-start rounded-2xl border-gray-300 border min-w-100% md:w-60"
+        >
+          <span className="flex gap-1 ">
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+          </span>
+          <p className="flex items-center font-bold" style={{fontFamily:"Satoshi-bold,sans-serif"}}>
+            Sarah M.
+            <MdVerified className="text-[#01AB31]" />
+          </p>
+          <p className="text-gray-500 text-xs">
+            "I'm blown away by the quality and style of the clothes I received
+            from Shop.co. From casual wear to elegant dresses, every piece I've
+            bought has exceeded my expectations.”
+          </p>
+        </div>
+        <div
+          id="review"
+          className="flex flex-col gap-3 p-5 md:p-5 items-start rounded-2xl border-gray-300 border min-w-100% md:w-60"
+        >
+          <span className="flex gap-1 ">
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+          </span>
+          <p className="flex items-center font-bold" style={{fontFamily:"Satoshi-bold,sans-serif"}}>
+            Sarah M.
+            <MdVerified className="text-[#01AB31]" />
+          </p>
+          <p className="text-gray-500 text-xs">
+            "I'm blown away by the quality and style of the clothes I received
+            from Shop.co. From casual wear to elegant dresses, every piece I've
+            bought has exceeded my expectations.”
+          </p>
+        </div>
+        <div
+          id="review"
+          className="flex flex-col gap-3 p-5 md:p-5 items-start rounded-2xl border-gray-300 border min-w-100% md:w-60"
+        >
+          <span className="flex gap-1 ">
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+            <IoStarSharp className="text-[#FFC633] text-lg"/>
+          </span>
+          <p className="flex items-center font-bold" style={{fontFamily:"Satoshi-bold,sans-serif"}}>
+            Sarah M.
+            <MdVerified className="text-[#01AB31]" />
+          </p>
+          <p className="text-gray-500 text-xs">
+            "I'm blown away by the quality and style of the clothes I received
+            from Shop.co. From casual wear to elegant dresses, every piece I've
+            bought has exceeded my expectations.”
+          </p>
+        </div>
+      </div>
+      </div>
     </div>
   );
 }
