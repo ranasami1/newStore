@@ -10,6 +10,10 @@ import productPic from "../assets/images/image 7.png";
 import productPic2 from "../assets/images/image 8.png";
 import productPic3 from "../assets/images/image 9.png";
 import productPic4 from "../assets/images/image 10.png";
+import casual from "../assets/images/Casual.png";
+import formal from "../assets/images/Formal.png";
+import party from "../assets/images/Party.png";
+import gym from "../assets/images/Gym.png";
 import { useToggle } from "../hooks/useToggle.jsx";
 export default function Home() {
   const { isOpen: isNewArrivalsOpen, toggle: toggleNewArrivals } = useToggle();
@@ -77,7 +81,7 @@ export default function Home() {
         <img src={brand5} className="w-20 md:w-30 p-0" alt="brand" />
         <img src={brand2} className="w-20 md:w-30 p-0" alt="brand" />
       </div>
-      <div className="flex flex-col items-center justify-center h-auto gap-5 py-10 sm:px-10 sm:py-20 border-b border-gray-300 mb-20">
+      <div className="flex flex-col items-center justify-center h-auto gap-5 py-10 sm:px-10 sm:py-20 border-b border-gray-300 mb-10">
         <h1
           className="text-black text-3xl md:text-4xl px-5"
           style={{ fontFamily: "Integral CF Bold, sans-serif" }}
@@ -112,7 +116,9 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className={`${isNewArrivalsOpen ? "flex " : "hidden"} w-full md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5`}>
+        <div
+          className={`${isNewArrivalsOpen ? "flex " : "hidden"} w-full md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5`}
+        >
           <ProductCard
             className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
             children={productPic}
@@ -146,7 +152,7 @@ export default function Home() {
           View All
         </Button>
       </div>
-      <div className="flex flex-col items-center justify-center h-auto gap-5 py-10 sm:px-10 sm:py-20 border-b border-gray-300 mb-20">
+      <div className="flex flex-col items-center justify-center h-auto gap-5 py-10 sm:px-10 sm:py-20 border-b border-gray-300 mb-10">
         <h1
           className="text-black text-3xl md:text-4xl px-5"
           style={{ fontFamily: "Integral CF Bold, sans-serif" }}
@@ -181,7 +187,9 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className={`${isTopSellingOpen  ? "flex " : "hidden"} w-full md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5`}>
+        <div
+          className={`${isTopSellingOpen ? "flex " : "hidden"} w-full md:flex-wrap md:justify-between overflow-x-auto scrollbar-hide gap-5 sm:p-10 p-5`}
+        >
           <ProductCard
             className="min-w-[50%] sm:min-w-[48%] md:min-w-0"
             children={productPic}
@@ -215,6 +223,54 @@ export default function Home() {
           View All
         </Button>
       </div>
+      <div className="bg-white p-5 md:p-10 flex items-center justify-center">
+        <div className="bg-[#F2F0F1] w-[99.5%] m-auto rounded-3xl p-5 md:p-10">
+        <h1
+          className="text-center text-3xl font-bold mb-8"
+          style={{ fontFamily: "Integral CF Bold, sans-serif" }}
+        >
+          BROWSE BY DRESS STYLE
+        </h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-1">
+            <p className="font-bold text-lg z-10 relative">Casual</p>
+            <img
+              src={casual}
+              alt="Casual"
+              className="absolute right-0 bottom-0 h-full object-cover"
+            />
+          </div>
+
+          <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-2">
+            <p className="font-bold text-lg z-10 relative">Formal</p>
+            <img
+              src={formal}
+              alt="Formal"
+              className="absolute right-0 bottom-0 h-full object-cover"
+            />
+          </div>
+
+          <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-2">
+            <p className="font-bold text-lg z-10 relative">Party</p>
+            <img
+              src={party}
+              alt="Party"
+              className="absolute right-0 bottom-0 h-full object-cover"
+            />
+          </div>
+
+          <div className="bg-white rounded-2xl p-5 overflow-hidden relative h-48 md:col-span-1">
+            <p className="font-bold text-lg z-10 relative">Gym</p>
+            <img
+              src={gym}
+              alt="Gym"
+              className="absolute right-0 bottom-0 h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+        </div>
     </div>
   );
 }
